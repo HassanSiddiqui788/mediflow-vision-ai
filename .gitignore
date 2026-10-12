@@ -1,0 +1,44 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Local sensitive configs
+.env
+.env.local
+
+# Model weights & large datasets
+*.pt
+*.pth
+*.bin
+*.onnx
+*.weights
+data/*.dcm
+data/*.zip
+data/*.tar.gz
+data/*.csv
+
+# Local database / demo history
+*.db
+*.sqlite
+*.sqlite3
+
+# Artifacts
+artifacts/*
+!artifacts/.gitkeep

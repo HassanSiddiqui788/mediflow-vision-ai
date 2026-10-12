@@ -1,0 +1,47 @@
+model:
+  name: "TorchXRayVision DenseNet-121"
+  architecture: "densenet121"
+  weights: "densenet121-res224-all"
+  provider: "torchxrayvision"
+  library_version: "1.5.5"
+  license: "Apache-2.0"
+  citation: "Cohen et al., TorchXRayVision: A library of chest X-ray datasets and models (2022)"
+  input_resolution: [224, 224]
+  input_channels: 1
+  normalization_range: [-1024.0, 1024.0]
+  raw_max_pixel_val: 255.0
+  device: "cpu"
+  apply_sigmoid: false
+
+pathologies:
+  - "Atelectasis"
+  - "Consolidation"
+  - "Infiltration"
+  - "Pneumothorax"
+  - "Edema"
+  - "Emphysema"
+  - "Fibrosis"
+  - "Effusion"
+  - "Pneumonia"
+  - "Pleural_Thickening"
+  - "Cardiomegaly"
+  - "Nodule"
+  - "Mass"
+  - "Hernia"
+  - "Lung Lesion"
+  - "Fracture"
+  - "Lung Opacity"
+  - "Enlarged Cardiomediastinum"
+
+validation:
+  max_file_size_mb: 10
+  allowed_extensions:
+    - ".png"
+    - ".jpg"
+    - ".jpeg"
+  min_dimension: 64
+  max_dimension: 4096
+
+inference:
+  operating_point_threshold: 0.5
+  top_k_findings: 5

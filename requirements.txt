@@ -1,0 +1,23 @@
+# Medical Vision AI Dependencies
+# Pretrained Chest X-ray Classification Pipeline
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Deep Learning and Computer Vision
+torch>=2.0.0
+torchvision>=0.15.0
+torchxrayvision>=1.5.0
+pillow>=10.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+scikit-image>=0.20.0
+
+# Web Application
+streamlit>=1.30.0
+
+# Data Validation and Config
+pydantic>=2.5.0
+pyyaml>=6.0
+
+# Automated Testing
+pytest>=8.0.0
